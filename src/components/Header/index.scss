@@ -1,4 +1,16 @@
 header{
+    
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
     width: 100%;
-    background-color: aqua;
+    height: 60px;
+    background-color: #77be00;
+    font-family: "Roboto", sans-serif;
+    size: 17pt;
+    z-index: 2;
+  
 }

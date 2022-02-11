@@ -6,6 +6,7 @@ const Header = () =>{
         <header>
             <h1>Ola</h1>
         </header>
+        
     )
 }
 

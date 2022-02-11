@@ -4,7 +4,7 @@ import "./index.scss"
 const Card = () => {
 
     return(
-        <div>
+        <div className="card">
             opa
         </div>
     )
