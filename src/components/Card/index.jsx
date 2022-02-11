@@ -1,11 +1,13 @@
 import "./index.scss"
 
 
-const Card = () => {
+const Card = (props) => {
 
     return(
         <div className="card">
-            opa
+            {props.name}
+            {props.price}
+           
         </div>
     )
 
