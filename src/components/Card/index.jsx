@@ -1,11 +1,5 @@
 import "./index.scss"
 
-
-function clicado(){
-    window.prompt("clicado")
-}
-
-
 const Card = (props) => {
 
     return(
@@ -13,8 +7,7 @@ const Card = (props) => {
             <div>Item: {props.name}</div>
 
             <div>Preço: {props.price}</div>
-            <button onClick={clicado}>Adicionar</button>
-           
+          
         </div>
     )
 

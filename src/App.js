@@ -1,13 +1,9 @@
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Items from './components/Items';
+import RoutesPage from './routes';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Items />
-      <Footer />
+      <RoutesPage />
     </div>
   );
 }
