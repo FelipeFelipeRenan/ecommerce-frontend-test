@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CarPage from "./pages/CarPage/car";
-import Main from "./pages/Main/main";
+import CartPage from "./pages/cart";
+import Main from "./pages/main";
 
 const RoutesPage = () => {
     return (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/cart" element={<CarPage />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
       </BrowserRouter>
     );

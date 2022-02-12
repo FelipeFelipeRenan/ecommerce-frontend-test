@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
-import AddButton from "../AddButton";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "../../context/CartContext";
 import Card from "../Card";
 import "./index.scss";
 
 
 
 const Items = () => {
-  const [cart, setCart] = useState([])
+
+  const{cart, handleCart} = useContext(CartContext)
 
   const [itemState, setItems] = useState([]);
   useEffect(() => {
@@ -18,11 +19,6 @@ const Items = () => {
   }, []);
 
 
-  function handleCart(name, price){
-    const itemobj = {name, price}
-    setCart([...cart, itemobj]) 
-
-  }
 
 
   return (
@@ -39,9 +35,10 @@ const Items = () => {
                     handleCart(item.name, item.price)
                     console.log(cart)
                     window.alert(`Item ${item.name} adicionado com sucesso!`);
+                    
                   }
                 }
-                >ADD 2</button>
+                >ADD</button>
               </div>
             </ul>
           );

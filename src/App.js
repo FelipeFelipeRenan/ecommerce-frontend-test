@@ -1,9 +1,12 @@
-import RoutesPage from './routes';
+import { CartProvider } from "./context/CartContext";
+import RoutesPage from "./routes";
 
 function App() {
   return (
     <div className="App">
-      <RoutesPage />
+      <CartProvider>
+        <RoutesPage />
+      </CartProvider>
     </div>
   );
 }
