@@ -7,6 +7,7 @@ const Card = (props) => {
             <div>Item: {props.name}</div>
 
             <div>Preço: {props.price}</div>
+            <div>Em estoque: {props.qtd}</div>
           
         </div>
     )

@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import "./index.scss";
 
 const MiniCart = () => {
-  const { cart, handleDeleteItemFromCart, handleClearCart } =
+  const { cart, handleDeleteItemFromCart, handleClearCart, handleCofirm } =
     useContext(CartContext);
 
   if (cart.length !== 0) {
@@ -22,7 +22,7 @@ const MiniCart = () => {
                       handleDeleteItemFromCart(item);
                     }}
                   >
-                    Excluir
+                    Excluir<i className="ri-close-fill"></i>
                   </button>
                 </div>
               </ul>
@@ -30,7 +30,10 @@ const MiniCart = () => {
           })}
         </li>
         <div className="minicart-buttons">
-          <button>Confirmar compra</button>
+          <button >
+            Confirmar compra <i className="ri-money-dollar-box-fill"></i>
+            {handleCofirm}
+          </button>
           <button onClick={handleClearCart}>Limpar carrinho</button>
         </div>
       </div>

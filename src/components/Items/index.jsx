@@ -25,7 +25,7 @@ const Items = () => {
               return (
                 <ul key={item.id}>
                   <div className="card-div">
-                    <Card name={item.name} price={item.price} />
+                    <Card name={item.name} price={item.price} qtd={item.qtd} />
 
                     <button
                       onClick={() => {
@@ -36,9 +36,8 @@ const Items = () => {
                         );
                       }}
                     >
-                      ADD <i class="fa-solid fa-cart-circle-plus"></i>
+                      ADD <i className="fa-solid fa-cart-circle-plus"></i>
                     </button>
-                    <i class="fa-solid fa-cart-circle-plus"></i>
                   </div>
                 </ul>
               );
