@@ -1,9 +1,11 @@
 .minicart {
   text-align: center;
+  -webkit-box-shadow: -6px 6px 15px 5px rgba(0, 0, 0, 0.61);
+  box-shadow: -6px 6px 15px 5px rgba(0, 0, 0, 0.61);
 
-  background-color: aqua;
-
-  width: 500px;
+  background-color: #d8d8d8;
+height: max-content;
+  width: 300px;
   margin-top: 60px;
   li {
     margin-right: 30px;
@@ -13,11 +15,14 @@
     justify-content: center;
     list-style-type: none;
   }
-  buttom {
+  button {
     background-color: aqua;
+    margin-bottom: 20px;
   }
 }
 .minicart-items {
+    display: flex;
+    flex-direction: column;
   border-color: black;
   border-style: groove;
 }

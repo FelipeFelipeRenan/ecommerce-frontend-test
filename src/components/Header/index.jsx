@@ -4,6 +4,7 @@ import "./index.scss";
 const Header = () => {
   return (
     <header>
+      <h1>Equipamentos Loja</h1>
       <div className="buttons">
         <Link to="/">
           <button>Home</button>
@@ -12,7 +13,6 @@ const Header = () => {
           <button>Carrinho</button>
         </Link>
       </div>
-      <h1>Ola</h1>
     </header>
   );
 };

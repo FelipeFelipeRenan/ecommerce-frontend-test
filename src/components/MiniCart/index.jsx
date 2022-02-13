@@ -15,10 +15,10 @@ const MiniCart = () => {
             return (
               <ul key={item.id}>
                 <div className="minicart-items">
-                  {item.name}
-                  {item.price}
+                  Item: {item.name}
+                  Valor: {item.price}
                   <button
-                    onClick={() => {
+                    onClick={(item) => {
                       handleDeleteItemFromCart(item);
                     }}
                   >
