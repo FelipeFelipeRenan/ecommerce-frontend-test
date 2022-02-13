@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
 const Cart = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, handleClearCart } = useContext(CartContext);
 
   if (cart.length === 0) {
     return (
@@ -13,7 +13,7 @@ const Cart = () => {
     );
   }
   return (
-    <div>
+    <div className="cart-container">
       <li>
         {cart.map((item) => {
           return (
@@ -27,6 +27,7 @@ const Cart = () => {
           );
         })}
       </li>
+      <button>Confirmar compra</button><button onClick={handleClearCart}>Limpar carrinho</button>
     </div>
   );
 };

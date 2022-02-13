@@ -3,7 +3,6 @@ import { createContext, useState } from "react";
 export const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
-
   const [cart, setCart] = useState([]);
 
   function handleCart(name, price) {
@@ -11,19 +10,23 @@ export const CartProvider = ({ children }) => {
     setCart([...cart, itemobj]);
   }
 
-  function handleDeleteItemFromCart(clickedItemIndex){
-      const filteredCart = cart.filter((cartItem) => 
-        cart.indexOf(cartItem) !== clickedItemIndex
-      )
-      setCart(filteredCart)
+  function handleDeleteItemFromCart(clickedItemIndex) {
+    const filteredCart = cart.filter(
+      (cartItem) => cart.indexOf(cartItem) !== clickedItemIndex
+    );
+    console.log(filteredCart)
+    setCart(filteredCart);
+    console.log(cart)
   }
 
-  function handleClearCart(){
-    setCart([])
+  function handleClearCart() {
+    setCart([]);
   }
 
   return (
-    <CartContext.Provider value={{ cart, handleCart, handleDeleteItemFromCart, handleClearCart }}>
+    <CartContext.Provider
+      value={{ cart, handleCart, handleDeleteItemFromCart, handleClearCart }}
+    >
       {children}
     </CartContext.Provider>
   );
