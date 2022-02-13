@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import Card from "../Card";
+import MiniCart from "../MiniCart";
 import "./index.scss";
 
 
@@ -22,6 +23,7 @@ const Items = () => {
 
 
   return (
+    <div className="body-items">
     <div className="card-container">
       <li>
         {itemState.map((item) => {
@@ -44,6 +46,8 @@ const Items = () => {
           );
         })}
       </li>
+    </div>
+    <MiniCart />
     </div>
   );
 };

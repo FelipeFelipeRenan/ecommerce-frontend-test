@@ -1,11 +1,16 @@
-div {
-  margin-top: 200px;
+
   ul {
     margin-top: 200px;
-    .cart-items {
-      background-color: aqua;
-      display: flex;
-      flex-direction: column;
-    }
+    list-style: none;
   }
+
+.cart-items {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.nada{
+  background-color: aqua;
+  height: 1000px;
 }

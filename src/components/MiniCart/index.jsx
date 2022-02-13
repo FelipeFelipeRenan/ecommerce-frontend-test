@@ -1,25 +1,17 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import "./index.scss";
 
-const Cart = () => {
+const MiniCart = () => {
   const { cart } = useContext(CartContext);
-
-  if (cart.length === 0) {
-    return (
-      <div className="nada">
-        <h1>Nenhum item adicionado ao Carrinho</h1>
-      </div>
-      
-    );
-  }
   return (
-    <div>
+    <div className="minicart">
+        Carrinho
       <li>
         {cart.map((item) => {
           return (
             <ul key={item.id}>
-              <div className="cart-items">
-                
+              <div className="minicart-items">
                 {item.name}
                 {item.price}
               </div>
@@ -27,8 +19,9 @@ const Cart = () => {
           );
         })}
       </li>
+      <button>Confirmar compra</button>
     </div>
   );
 };
 
-export default Cart;
+export default MiniCart;

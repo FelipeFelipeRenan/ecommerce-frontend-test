@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-right: 50px;
     li{
         display: inherit;
         flex-wrap: inherit;
@@ -26,4 +27,9 @@
         }
 
     }
+}
+
+.body-items{
+    display: flex;
+    flex-direction: row;
 }

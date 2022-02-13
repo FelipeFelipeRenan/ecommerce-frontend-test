@@ -5,8 +5,9 @@ import Items from "../components/Items";
 const Main = () => {
   return (
     <>
-      <Header />
+      <Header  />
       <Items />
+      
       <Footer />
     </>
   );
