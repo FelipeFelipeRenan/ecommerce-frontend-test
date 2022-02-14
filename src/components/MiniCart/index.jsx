@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import "./index.scss";
 
 const MiniCart = () => {
-  const { cart, handleDeleteItemFromCart, handleClearCart, handleCofirm } =
+  const { cart, handleDeleteItemFromCart, handleClearCart } =
     useContext(CartContext);
 
   if (cart.length !== 0) {
@@ -30,9 +30,12 @@ const MiniCart = () => {
           })}
         </li>
         <div className="minicart-buttons">
-          <button >
+          <button onClick={() =>{
+              window.alert("Um de nossos profisionais entrará em contato para confirmação de dados")
+              window.location.href = '/'
+              
+          }}>
             Confirmar compra <i className="ri-money-dollar-box-fill"></i>
-            {handleCofirm}
           </button>
           <button onClick={handleClearCart}>Limpar carrinho</button>
         </div>

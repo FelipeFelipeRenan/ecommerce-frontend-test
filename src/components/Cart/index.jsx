@@ -26,7 +26,12 @@ const Cart = () => {
             );
           })}
         </li>
-        <button>Confirmar compra</button>
+        <button onClick={() =>{
+          window.alert("Um de nossos profisionais entrará em contato para confirmação de dados")
+          window.location.href = '/'
+
+        
+        } }>Confirmar compra</button>
         <button onClick={handleClearCart}>Limpar carrinho</button>
       </div>
     );

@@ -1,4 +1,3 @@
-import axios from "axios";
 import { createContext, useState } from "react";
 
 export const CartContext = createContext({});
@@ -24,19 +23,12 @@ export const CartProvider = ({ children }) => {
     setCart([]);
   }
 
-  function handleConfirm(item) {
-    const res = axios.put(
-      `https://ecommerce-teste.herokuapp.com/items/${item}`,
-      { qtd: item.qtd - 1 }
-    );
-    console.log(res);
-  }
+  function handleConfirm() {}
 
   function handleTotalPrice() {
     let total = cart.reduce((acc, price) => (acc += cart.price));
-    console.log(total)
+    console.log(total);
     return total;
-
   }
 
   return (
@@ -47,7 +39,7 @@ export const CartProvider = ({ children }) => {
         handleDeleteItemFromCart,
         handleClearCart,
         handleConfirm,
-        handleTotalPrice
+        handleTotalPrice,
       }}
     >
       {children}
